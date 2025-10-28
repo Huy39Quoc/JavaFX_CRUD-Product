@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="main.dojavafx.Controller.HomeController">
+    <top>
+        <HBox spacing="10" padding="10">
+            <Label fx:id="userLabel" text="Welcome, User"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Add Product" onAction="#handleAdd"/>
+            <Button text="Logout" onAction="#handleLogout"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="productTable">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
+                <TableColumn fx:id="colPrice" text="Price" prefWidth="80"/>
+                <TableColumn fx:id="colStock" text="Stock" prefWidth="80"/>
+                <TableColumn fx:id="colCreatedAt" text="Created At" prefWidth="130"/>
+                <TableColumn fx:id="colCategory" text="Category" prefWidth="100"/>
+                <TableColumn fx:id="colEdit" text="Edit" prefWidth="80"/>
+                <TableColumn fx:id="colDelete" text="Delete" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
